@@ -1,0 +1,30 @@
+{
+  "name": "serverinstaller",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5"
+  },
+  "build": {
+    "appId": "com.serverinstaller.app",
+    "productName": "Server Installer",
+    "files": [
+      "main.js",
+      "src/index.html",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
